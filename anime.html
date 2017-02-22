@@ -23,8 +23,8 @@
      * */
     var myAnimation = anime({
         targets: ['.demo1', '.demo2', '.demo3'], //进行"运动"的节点们~  节点 选择器....
-        translateX: [50, 250], //value为数值的话是从现在位置到最终位置， 数组的话是从现在位置到开始位置再到最终位置
-        delay: function (el, index, total) { //可接收数值和function  参数为目标dom 索引 全部
+        translateX: [50, 250],                   //value为数值的话是从现在位置到最终位置， 数组的话是从现在位置到开始位置再到最终位置
+        delay: function (el, index, total) {     //可接收数值和function  参数为目标dom 索引 全部
             return index * 180;
         },
         rotate: {                    //可接受数值和object scale相同  同时也可以引入高级动画库(有兼容问题)var myPath = anime.path('path');
@@ -44,7 +44,7 @@
         'background-color': '#3fa46a',
         duration: 3000,              //整体动画执行时间
 
-        begin: function () {          // 钩子函数 begin + update + complete
+        begin: function () {         // 钩子函数 begin + update + complete
             console.log('start');
         },
         update: function () {
@@ -57,9 +57,9 @@
 
         /*
          * 另外还有helpers
-         * anime.list;        //Return an array of all active animations objects
-         * anime.speed = .5   //Change all animations speed (from 0 to 1).
-         * anime.remove('.item-2'); // Will remove all divs with the class '.item-2'
+         * anime.list;                //Return an array of all active animations objects
+         * anime.speed = .5           //Change all animations speed (from 0 to 1).
+         * anime.remove('.item-2');   // Will remove all divs with the class '.item-2'
          * anime.getValue('div', 'translateX'); // Will return '100px'
          * and so on...
          * */
